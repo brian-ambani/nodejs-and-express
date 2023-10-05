@@ -10,8 +10,6 @@ import {
 
 const router = express.Router();
 
-let users = [];
-
 //getting all users
 router.get("/", getUsers);
 
@@ -19,10 +17,12 @@ router.get("/", getUsers);
 router.post("/", createUser);
 
 //get a single user
-
 router.get("/:id", getUser);
 
+//delete a user
 router.delete("/:id", deleteUser);
+
+//update a user
 router.patch("/:id", updateUser);
 
 export default router;
